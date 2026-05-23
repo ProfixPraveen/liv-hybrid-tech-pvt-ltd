@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<!-- saved from url=(0061)file:///C:/Users/prave/Downloads/liv-hybrid-tech-courses.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Courses &amp; Careers — Liv Hybrid Tech Pvt Ltd</title>
+<link href="./Courses &amp; Careers — Liv Hybrid Tech Pvt Ltd_files/css2" rel="stylesheet">
+<style>
+:root {
+  --ink: #0b0f1a;
+  --ink-soft: #2d3348;
+  --slate: #5a6380;
+  --accent: #00c8a0;
+  --accent2: #0077ff;
+  --surface: #f4f6fb;
+  --white: #ffffff;
+  --border: #e2e6f0;
+  --gradient: linear-gradient(135deg, #0b1a3a 0%, #0d2d5e 50%, #0a4a6e 100%);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'DM Sans', sans-serif; background: var(--white); color: var(--ink); overflow-x: hidden; }
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 5vw; height: 70px;
+  background: rgba(11,15,26,0.94);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.nav-logo {
+  font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.2rem;
+  color: var(--white); letter-spacing: -0.02em;
+  display: flex; align-items: center; gap: 10px;
+}
+.logo-mark {
+  width: 32px; height: 32px;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  border-radius: 7px; display: flex; align-items: center; justify-content: center;
+  font-size: 0.8rem; font-weight: 800; color: #fff;
+}
+.nav-cta {
+  background: var(--accent); color: var(--ink);
+  padding: 9px 22px; border-radius: 6px;
+  font-weight: 700; font-size: 0.85rem;
+  text-decoration: none; display: inline-block;
+  transition: opacity 0.2s;
+}
+.nav-cta:hover { opacity: 0.85; }
+
+/* ── HERO ── */
+.courses-hero {
+  background: var(--gradient);
+  padding: 130px 5vw 70px;
+  position: relative; overflow: hidden;
+}
+.hero-grid {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(0,200,160,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,200,160,0.06) 1px, transparent 1px);
+  background-size: 56px 56px;
+  pointer-events: none;
+}
+.hero-orb {
+  position: absolute; border-radius: 50%; filter: blur(80px); pointer-events: none;
+}
+.orb1 { width: 420px; height: 420px; background: rgba(0,200,160,0.14); top: -80px; right: -60px; }
+.orb2 { width: 300px; height: 300px; background: rgba(0,119,255,0.1); bottom: -60px; left: 25%; }
+
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(0,200,160,0.12); border: 1px solid rgba(0,200,160,0.28);
+  color: var(--accent); padding: 6px 16px; border-radius: 20px;
+  font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+  margin-bottom: 24px;
+  animation: fadeUp 0.6s ease both;
+}
+.hero-badge::before { content: '●'; font-size: 0.45rem; }
+
+.courses-hero h1 {
+  font-family: 'Syne', sans-serif; font-weight: 800;
+  font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+  line-height: 1.08; letter-spacing: -0.03em;
+  color: var(--white); max-width: 780px; margin-bottom: 22px;
+  animation: fadeUp 0.6s 0.1s ease both;
+}
+.courses-hero h1 em {
+  font-style: normal;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.courses-hero p {
+  color: rgba(255,255,255,0.6); font-size: 1.1rem; line-height: 1.75;
+  max-width: 620px; font-weight: 300;
+  animation: fadeUp 0.6s 0.2s ease both;
+}
+
+/* ── JOURNEY STRIP ── */
+.journey-strip {
+  background: var(--ink);
+  padding: 0 5vw;
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+@media(max-width:700px){ .journey-strip { grid-template-columns: 1fr 1fr; } }
+.journey-step {
+  padding: 40px 28px;
+  border-right: 1px solid rgba(255,255,255,0.06);
+  display: flex; flex-direction: column; align-items: flex-start;
+  position: relative;
+}
+.journey-step:last-child { border-right: none; }
+.j-num {
+  font-family: 'Syne', sans-serif; font-size: 2.4rem; font-weight: 800;
+  color: rgba(0,200,160,0.18); line-height: 1; margin-bottom: 10px;
+}
+.j-icon { font-size: 1.6rem; margin-bottom: 10px; }
+.journey-step h4 { font-family: 'Syne', sans-serif; font-weight: 700; color: var(--white); font-size: 0.95rem; margin-bottom: 6px; }
+.journey-step p { font-size: 0.8rem; color: rgba(255,255,255,0.42); line-height: 1.65; }
+.j-arrow {
+  position: absolute; right: -14px; top: 50%; transform: translateY(-50%);
+  width: 26px; height: 26px; border-radius: 50%;
+  background: rgba(0,200,160,0.15); border: 1px solid rgba(0,200,160,0.25);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--accent); font-size: 0.75rem; z-index: 2;
+}
+@media(max-width:700px){ .j-arrow { display: none; } }
+
+/* ── SECTION BASE ── */
+section { padding: 90px 5vw; }
+.section-label {
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 14px;
+  display: flex; align-items: center; gap: 10px;
+}
+.section-label::before { content: ''; width: 26px; height: 2px; background: var(--accent); }
+.section-title {
+  font-family: 'Syne', sans-serif; font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 800; letter-spacing: -0.025em; line-height: 1.15;
+  margin-bottom: 16px; color: var(--ink);
+}
+.section-sub { font-size: 1rem; color: var(--slate); line-height: 1.75; max-width: 600px; font-weight: 300; }
+
+/* ── FILTER TABS ── */
+.filter-bar {
+  display: flex; gap: 10px; flex-wrap: wrap; margin: 40px 0 36px;
+}
+.filter-btn {
+  padding: 10px 24px; border-radius: 50px;
+  border: 1.5px solid var(--border);
+  background: var(--white); color: var(--slate);
+  font-family: 'DM Sans', sans-serif; font-size: 0.87rem; font-weight: 600;
+  cursor: pointer; transition: all 0.2s; letter-spacing: 0.02em;
+}
+.filter-btn:hover, .filter-btn.active {
+  background: var(--ink); border-color: var(--ink); color: var(--white);
+}
+.filter-btn.active { background: linear-gradient(135deg, #0b1a3a, #0a4a6e); }
+
+/* ── COURSE CARDS ── */
+.courses-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+.course-card {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: 18px; overflow: hidden;
+  transition: transform 0.25s, box-shadow 0.25s;
+  position: relative;
+}
+.course-card:hover { transform: translateY(-7px); box-shadow: 0 22px 55px rgba(11,15,26,0.1); }
+.course-card[data-hidden="true"] { display: none; }
+
+.card-top {
+  padding: 32px 28px 24px;
+  position: relative;
+  background: linear-gradient(160deg, var(--surface) 0%, var(--white) 100%);
+  border-bottom: 1px solid var(--border);
+}
+.card-badge {
+  position: absolute; top: 20px; right: 20px;
+  background: rgba(0,200,160,0.12); border: 1px solid rgba(0,200,160,0.25);
+  color: #007a5e; padding: 4px 12px; border-radius: 20px;
+  font-size: 0.7rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+}
+.card-badge.arts { background: rgba(255,160,80,0.1); border-color: rgba(255,160,80,0.25); color: #b05a00; }
+.card-badge.diploma { background: rgba(120,80,255,0.1); border-color: rgba(120,80,255,0.25); color: #5a00b0; }
+.card-badge.mba { background: rgba(0,119,255,0.1); border-color: rgba(0,119,255,0.25); color: #0055bb; }
+
+.card-icon { font-size: 2.4rem; margin-bottom: 14px; display: block; }
+.card-top h3 {
+  font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.1rem;
+  color: var(--ink); margin-bottom: 8px; line-height: 1.3;
+}
+.card-top p { font-size: 0.85rem; color: var(--slate); line-height: 1.65; }
+
+.card-bottom { padding: 22px 28px; }
+.card-meta {
+  display: flex; flex-direction: column; gap: 10px; margin-bottom: 18px;
+}
+.meta-row {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 0.82rem; color: var(--ink-soft);
+}
+.meta-row span:first-child {
+  width: 26px; height: 26px; border-radius: 7px;
+  background: var(--surface); display: flex; align-items: center; justify-content: center;
+  font-size: 0.9rem; flex-shrink: 0;
+}
+.skills-list { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 20px; }
+.skill-chip {
+  background: var(--surface); border: 1px solid var(--border);
+  color: var(--slate); padding: 4px 11px; border-radius: 20px;
+  font-size: 0.73rem; font-weight: 500;
+}
+.card-apply-btn {
+  width: 100%; background: var(--ink); color: var(--white);
+  padding: 12px; border-radius: 9px; border: none;
+  font-family: 'DM Sans', sans-serif; font-size: 0.9rem; font-weight: 700;
+  cursor: pointer; transition: background 0.2s;
+  text-decoration: none; display: block; text-align: center;
+}
+.card-apply-btn:hover { background: linear-gradient(135deg, #0b1a3a, #0a4a6e); }
+
+/* No-fee badge */
+.no-fee-banner {
+  background: linear-gradient(90deg, rgba(0,200,160,0.08), rgba(0,119,255,0.06));
+  border: 1px dashed rgba(0,200,160,0.35);
+  border-radius: 10px; padding: 10px 16px;
+  display: flex; align-items: center; gap: 10px;
+  font-size: 0.8rem; color: #007a5e; font-weight: 600;
+  margin-bottom: 14px;
+}
+
+/* ── HOW IT WORKS ── */
+.hiw-section { background: var(--surface); }
+.hiw-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px; margin-top: 52px;
+}
+.hiw-card {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: 16px; padding: 34px 28px;
+  position: relative; overflow: hidden;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.hiw-card:hover { transform: translateY(-5px); box-shadow: 0 16px 42px rgba(11,15,26,0.09); }
+.hiw-card::after {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  transform: scaleX(0); transform-origin: left; transition: transform 0.3s;
+}
+.hiw-card:hover::after { transform: scaleX(1); }
+.hiw-step-num {
+  font-family: 'Syne', sans-serif; font-size: 3rem; font-weight: 800;
+  color: rgba(0,200,160,0.12); position: absolute; top: 16px; right: 20px; line-height: 1;
+}
+.hiw-icon { font-size: 2rem; margin-bottom: 18px; }
+.hiw-card h4 { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1rem; color: var(--ink); margin-bottom: 8px; }
+.hiw-card p { font-size: 0.85rem; color: var(--slate); line-height: 1.7; }
+
+/* ── OPPORTUNITY BAND ── */
+.opportunity-band {
+  background: var(--ink); padding: 80px 5vw;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;
+}
+@media(max-width:800px){ .opportunity-band { grid-template-columns: 1fr; gap: 36px; } }
+.opp-left h2 {
+  font-family: 'Syne', sans-serif; font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 800; letter-spacing: -0.025em; color: var(--white); margin-bottom: 18px;
+}
+.opp-left h2 span {
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.opp-left p { color: rgba(255,255,255,0.55); font-size: 0.95rem; line-height: 1.75; font-weight: 300; margin-bottom: 28px; }
+.perks-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+.perks-list li {
+  display: flex; gap: 14px; align-items: flex-start;
+  font-size: 0.9rem; color: rgba(255,255,255,0.7); line-height: 1.55;
+}
+.perk-icon {
+  min-width: 32px; height: 32px; border-radius: 8px;
+  background: rgba(0,200,160,0.12); border: 1px solid rgba(0,200,160,0.2);
+  display: flex; align-items: center; justify-content: center; font-size: 0.95rem;
+}
+
+.opp-right {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 20px; padding: 40px 36px;
+}
+.opp-right h3 {
+  font-family: 'Syne', sans-serif; font-weight: 700; color: var(--white);
+  font-size: 1.2rem; margin-bottom: 8px;
+}
+.opp-right .sub { color: rgba(255,255,255,0.45); font-size: 0.85rem; margin-bottom: 28px; }
+.step-flow { display: flex; flex-direction: column; gap: 0; }
+.flow-step {
+  display: flex; gap: 18px; align-items: flex-start;
+  padding-bottom: 24px; position: relative;
+}
+.flow-step:not(:last-child)::after {
+  content: ''; position: absolute; left: 15px; top: 36px; bottom: 0; width: 2px;
+  background: rgba(0,200,160,0.2);
+}
+.flow-dot {
+  min-width: 32px; height: 32px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.75rem; font-weight: 800; color: var(--ink);
+}
+.flow-step h5 { font-family: 'Syne', sans-serif; font-weight: 700; color: var(--white); font-size: 0.9rem; margin-bottom: 4px; }
+.flow-step p { font-size: 0.8rem; color: rgba(255,255,255,0.42); line-height: 1.55; }
+
+/* ── APPLY SECTION ── */
+.apply-section { padding: 90px 5vw; }
+.apply-inner {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start;
+}
+@media(max-width:800px){ .apply-inner { grid-template-columns: 1fr; gap: 40px; } }
+
+.apply-info h2 {
+  font-family: 'Syne', sans-serif; font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 800; letter-spacing: -0.025em; color: var(--ink); margin-bottom: 16px; line-height: 1.15;
+}
+.apply-info p { color: var(--slate); font-size: 0.95rem; line-height: 1.75; margin-bottom: 28px; }
+
+.contact-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 16px; padding: 28px;
+  margin-bottom: 20px;
+}
+.contact-row {
+  display: flex; align-items: flex-start; gap: 14px; margin-bottom: 18px;
+}
+.contact-row:last-child { margin-bottom: 0; }
+.c-icon {
+  width: 40px; height: 40px; min-width: 40px; border-radius: 10px;
+  background: linear-gradient(135deg, rgba(0,200,160,0.12), rgba(0,119,255,0.08));
+  display: flex; align-items: center; justify-content: center; font-size: 1.1rem;
+}
+.c-text strong { display: block; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--slate); margin-bottom: 3px; }
+.c-text a, .c-text span { font-size: 0.9rem; color: var(--ink); text-decoration: none; line-height: 1.55; display: block; }
+.c-text a { color: var(--accent2); }
+.c-text a:hover { text-decoration: underline; }
+
+.direct-apply-btn {
+  display: flex; align-items: center; gap: 10px;
+  background: linear-gradient(135deg, var(--accent), #00a884);
+  color: var(--ink); padding: 15px 28px; border-radius: 10px;
+  text-decoration: none; font-weight: 700; font-size: 1rem;
+  font-family: 'DM Sans', sans-serif;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 24px rgba(0,200,160,0.3);
+  width: fit-content; margin-top: 8px;
+}
+.direct-apply-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,200,160,0.4); }
+.direct-apply-btn span { font-size: 1.3rem; }
+
+/* Apply form panel */
+.apply-form-wrap {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: 20px; padding: 44px 38px;
+  box-shadow: 0 8px 40px rgba(11,15,26,0.06);
+}
+.apply-form-wrap h3 { font-family: 'Syne', sans-serif; font-size: 1.3rem; font-weight: 700; color: var(--ink); margin-bottom: 6px; }
+.apply-form-wrap .fsub { color: var(--slate); font-size: 0.85rem; margin-bottom: 28px; }
+.field { margin-bottom: 16px; }
+label { display: block; font-size: 0.78rem; font-weight: 700; color: var(--ink-soft); margin-bottom: 7px; letter-spacing: 0.03em; }
+input, select, textarea {
+  width: 100%; border: 1.5px solid var(--border); border-radius: 9px;
+  padding: 12px 15px; font-family: 'DM Sans', sans-serif; font-size: 0.9rem; color: var(--ink);
+  background: var(--surface); outline: none; transition: border-color 0.2s, box-shadow 0.2s;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: var(--accent); box-shadow: 0 0 0 3px rgba(0,200,160,0.1); background: #fff;
+}
+textarea { resize: vertical; min-height: 100px; }
+.form-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 16px; }
+@media(max-width:500px){ .form-row-2 { grid-template-columns: 1fr; } }
+.or-divider {
+  display: flex; align-items: center; gap: 14px; margin: 22px 0;
+  color: var(--slate); font-size: 0.8rem;
+}
+.or-divider::before, .or-divider::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+.survey-link-btn {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  border: 2px solid var(--accent2); color: var(--accent2);
+  background: rgba(0,119,255,0.04); border-radius: 10px; padding: 13px;
+  font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 0.92rem;
+  text-decoration: none; transition: background 0.2s, transform 0.2s;
+  cursor: pointer;
+}
+.survey-link-btn:hover { background: rgba(0,119,255,0.08); transform: translateY(-1px); }
+.submit-btn {
+  width: 100%; margin-top: 8px; padding: 14px;
+  background: linear-gradient(135deg, var(--ink), #0d2d5e);
+  color: white; border: none; border-radius: 10px;
+  font-family: 'DM Sans', sans-serif; font-size: 0.95rem; font-weight: 700;
+  cursor: pointer; transition: opacity 0.2s, transform 0.2s;
+  letter-spacing: 0.02em;
+}
+.submit-btn:hover { opacity: 0.9; transform: translateY(-1px); }
+.success-note {
+  display: none; background: rgba(0,200,160,0.08); border: 1px solid rgba(0,200,160,0.25);
+  border-radius: 10px; padding: 14px 18px; color: #006f55; font-size: 0.88rem;
+  text-align: center; margin-top: 14px;
+}
+
+/* ── FOOTER ── */
+footer {
+  background: var(--ink); color: rgba(255,255,255,0.45);
+  padding: 50px 5vw 28px;
+  text-align: center;
+}
+footer .foot-logo {
+  font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.1rem;
+  color: var(--white); margin-bottom: 10px; display: flex; align-items: center; gap: 10px; justify-content: center;
+}
+footer p { font-size: 0.82rem; line-height: 1.7; max-width: 460px; margin: 0 auto 16px; }
+footer .foot-line { border-top: 1px solid rgba(255,255,255,0.07); padding-top: 22px; font-size: 0.78rem; }
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(26px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <div class="logo-mark">LH</div>
+    Liv Hybrid<span style="color:var(--accent)">&nbsp;Tech</span>
+  </div>
+  <a href="https://surveyheart.com/form/69b9172493491404a4690bb2" target="_blank" class="nav-cta">Apply Now →</a>
+</nav>
+
+
+<!-- ═══════════════════════════════════════════
+     HERO
+════════════════════════════════════════════ -->
+<div class="courses-hero">
+  <div class="hero-grid"></div>
+  <div class="hero-orb orb1"></div>
+  <div class="hero-orb orb2"></div>
+  <div class="hero-badge">Directly from Our Office · Anaipputhur, Avinashi, Tirupur</div>
+  <h1>Courses &amp; Careers<br>Tailored for <em>Your Degree</em></h1>
+  <p>Liv Hybrid Tech offers in-house training programs designed around your academic background — Engineering, Arts, or Diploma. Complete the program, clear the interview, and step into your career with us.</p>
+</div>
+
+
+<!-- ═══════════════════════════════════════════
+     JOURNEY STRIP
+════════════════════════════════════════════ -->
+<div class="journey-strip">
+  <div class="journey-step">
+    <div class="j-num">01</div>
+    <div class="j-icon">📚</div>
+    <h4>Enroll in Training</h4>
+    <p>Register for a course matched to your degree. All materials provided by us — free of cost.</p>
+    <div class="j-arrow">→</div>
+  </div>
+  <div class="journey-step">
+    <div class="j-num">02</div>
+    <div class="j-icon">🛠️</div>
+    <h4>Learn &amp; Build</h4>
+    <p>Hands-on sessions with real-world projects, guided by industry-experienced mentors.</p>
+    <div class="j-arrow">→</div>
+  </div>
+  <div class="journey-step">
+    <div class="j-num">03</div>
+    <div class="j-icon">🎯</div>
+    <h4>Interview Round</h4>
+    <p>Attend an internal interview upon course completion to demonstrate your skills.</p>
+    <div class="j-arrow">→</div>
+  </div>
+  <div class="journey-step">
+    <div class="j-num">04</div>
+    <div class="j-icon">🚀</div>
+    <h4>Join Our Team</h4>
+    <p>Successful candidates are offered a position directly within Liv Hybrid Tech.</p>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════
+     COURSES SECTION
+════════════════════════════════════════════ -->
+<section id="courses">
+  <div class="section-label reveal visible">Our Training Programs</div>
+  <h2 class="section-title reveal visible">Courses for Every<br>Degree Background</h2>
+  <p class="section-sub reveal visible">All programs are conducted directly at our office. No external fees — we invest in your growth so you can grow with us.</p>
+
+  <!-- Filter tabs -->
+  <div class="filter-bar reveal visible">
+    <button class="filter-btn active" onclick="filterCourses(&#39;all&#39;)">All Courses</button>
+    <button class="filter-btn" onclick="filterCourses(&#39;engineering&#39;)">🔧 Engineering</button>
+    <button class="filter-btn" onclick="filterCourses(&#39;arts&#39;)">🎨 Arts &amp; Science</button>
+    <button class="filter-btn" onclick="filterCourses(&#39;diploma&#39;)">📜 Diploma</button>
+    <button class="filter-btn" onclick="filterCourses(&#39;mba&#39;)">📊 MBA / Management</button>
+  </div>
+
+  <div class="courses-grid" id="coursesGrid">
+
+    <!-- ─── ENGINEERING CARDS ─── -->
+    <div class="course-card reveal visible" data-category="engineering">
+      <div class="card-top">
+        <span class="card-badge">Engineering</span>
+        <span class="card-icon">💻</span>
+        <h3>Full-Stack Web Development</h3>
+        <p>Master front-end and back-end technologies. Build real-world web applications from scratch with live project exposure.</p>
+      </div>
+      <div class="card-bottom">
+        <div class="no-fee-banner">🎁 Training materials fully provided by our office</div>
+        <div class="card-meta">
+          <div class="meta-row"><span>🎓</span><span>For: B.E / B.Tech / M.E / MCA</span></div>
+          <div class="meta-row"><span>⏱️</span><span>Duration: 45 Days Intensive</span></div>
+          <div class="meta-row"><span>📍</span><span>Conducted at: Anaipputhur, Avinashi</span></div>
+        </div>
+        <div class="skills-list">
+          <span class="skill-chip">HTML/CSS</span><span class="skill-chip">JavaScript</span>
+          <span class="skill-chip">React</span><span class="skill-chip">Node.js</span>
+          <span class="skill-chip">MySQL</span>
+        </div>
+        <a href="https://surveyheart.com/form/69b9172493491404a4690bb2" target="_blank" class="card-apply-btn">Apply &amp; Upload Resume →</a>
+      </div>
+    </div>
+
+    <div class="course-card reveal visible" data-category="engineering">
+      <div class="card-top">
+        <span class="card-badge">Engineering</span>
+        <span class="card-icon">📱</span>
+        <h3>Mobile Application Development</h3>
+        <p>Build cross-platform Android &amp; iOS apps using modern frameworks. Work on real app deployment from day one.</p>
+      </div>
+      <div class="card-bottom">
+        <div class="no-fee-banner">🎁 Training materials fully provided by our office</div>
+        <div class="card-meta">
+          <div class="meta-row"><span>🎓</span><span>For: B.E / B.Tech / B.Sc (CS/IT)</span></div>
+          <div class="meta-row"><span>⏱️</span><span>Duration: 45 Days Intensive</span></div>
+          <div class="meta-row"><span>📍</span><span>Conducted at: Anaipputhur, Avinashi</span></div>
+        </div>
+        <div class="skills-list">
+          <span class="skill-chip">React Native</span><span class="skill-chip">Flutter</span>
+          <span class="skill-chip">Firebase</span><span class="skill-chip">REST APIs</span>
+        </div>
+        <a href="https://surveyheart.com/form/69b9172493491404a4690bb2" target="_blank" class="card-apply-btn">Apply &amp; Upload Resume →</a>
+      </div>
+    </div>
+
+    <div class="course-card reveal visible" data-category="engineering">
+      <div class="card-top">
+        <span class="card-badge">Engineering</span>
+        <span class="card-icon">🤖</span>
+        <h3>AI &amp; Machine Learning Fundamentals</h3>
+        <p>Introduction to artificial intelligence, data analysis, and building intelligent systems with hands-on projects.</p>
+      </div>
+      <div class="card-bottom">
+        <div class="no-fee-banner">🎁 Training materials fully provided by our office</div>
+        <div class="card-meta">
+          <div class="meta-row"><span>🎓</span><span>For: B.E / B.Tech / M.Sc (CS)</span></div>
+          <div class="meta-row"><span>⏱️</span><span>Duration: 60 Days</span></div>
+          <div class="meta-row"><span>📍</span><span>Conducted at: Anaipputhur, Avinashi</span></div>
+        </div>
+        <div class="skills-list">
+          <span class="skill-chip">Python</span><span class="skill-chip">TensorFlow</span>
+          <span class="skill-chip">Data Analysis</span><span class="skill-chip">NLP Basics</span>
+        </div>
+        <a href="https://surveyheart.com/form/69b9172493491404a4690bb2" target="_blank" class="card-apply-btn">Apply &amp; Upload Resume →</a>
+      </div>
+    </div>
+
+    <!-- ─── ARTS CARDS ─── -->
+    <div class="course-card reveal visible" data-category="arts">
+      <div class="card-top">
+        <span class="card-badge arts">Arts &amp; Science</span>
+        <span class="card-icon">🎨</span>
+        <h3>UI/UX Design &amp; Digital Creativity</h3>
+        <p>Combine your creative background with digital design skills. Learn user research, wireframing, and visual design for tech products.</p>
+      </div>
+      <div class="card-bottom">
+        <div class="no-fee-banner">🎁 Training materials fully provided by our office</div>
+        <div class="card-meta">
+          <div class="meta-row"><span>🎓</span><span>For: B.A / B.Sc / B.Com / BCA</span></div>
+          <div class="meta-row"><span>⏱️</span><span>Duration: 30 Days</span></div>
+          <div class="meta-row"><span>📍</span><span>Conducted at: Anaipputhur, Avinashi</span></div>
+        </div>
+        <div class="skills-list">
+          <span class="skill-chip">Figma</span><span class="skill-chip">Canva Pro</span>
+          <span class="skill-chip">User Research</span><span class="skill-chip">Prototyping</span>
+        </div>
+        <a href="https://surveyheart.com/form/69b9172493491404a4690bb2" target="_blank" class="card-apply-btn">Apply &amp; Upload Resume →</a>
+      </div>
+    </div>
+
+    <div class="course-card reveal visible" data-category="arts">
+      <div class="card-top">
+        <span class="card-badge arts">Arts &amp; Science</span>
+        <span class="card-icon">📢</span>
+        <h3>Digital Marketing &amp; Social Media</h3>
+        <p>Learn to plan and execute digital marketing campaigns — SEO, content strategy, social media, and paid ads for tech brands.</p>
+      </div>
+      <div class="card-bottom">
+        <div class="no-fee-banner">🎁 Training materials fully provided by our office</div>
+        <div class="card-meta">
+          <div class="meta-row"><span>🎓</span><span>For: B.A / B.Com / BBA / Any Arts degree</span></div>
+          <div class="meta-row"><span>⏱️</span><span>Duration: 30 Days</span></div>
+          <div class="meta-row"><span>📍</span><span>Conducted at: Anaipputhur, Avinashi</span></div>
+        </div>
+        <div class="skills-list">
+          <span class="skill-chip">Google Ads</span><span class="skill-chip">SEO</span>
+          <span class="skill-chip">Content Writing</span><span class="skill-chip">Analytics</span>
+        </div>
+        <a href="https://surveyheart.com/form/69b9172493491404a4690bb2" target="_blank" class="card-apply-btn">Apply &amp; Upload Resume →</a>
+      </div>
+    </div>
+
+    <div class="course-card reveal visible" data-category="arts">
+      <div class="card-top">
+        <span class="card-badge arts">Arts &amp; Science</span>
+        <span class="card-icon">📊</span>
+        <h3>Data Entry &amp; Office Operations</h3>
+        <p>Structured training in data management, client coordination, and digital tools used in a modern tech company environment.</p>
+      </div>
+      <div class="card-bottom">
+        <div class="no-fee-banner">🎁 Training materials fully provided by our office</div>
+        <div class="card-meta">
+          <div class="meta-row"><span>🎓</span><span>For: Any Arts / Commerce Graduate</span></div>
+          <div class="meta-row"><span>⏱️</span><span>Duration: 21 Days</span></div>
+          <div class="meta-row"><span>📍</span><span>Conducted at: Anaipputhur, Avinashi</span></div>
+        </div>
+        <div class="skills-list">
+          <span class="skill-chip">MS Office</span><span class="skill-chip">Google Workspace</span>
+          <span class="skill-chip">CRM Tools</span><span class="skill-chip">Data Entry</span>
+        </div>
+        <a href="https://surveyheart.com/form/69b9172493491404a4690bb2" target="_blank" class="card-apply-btn">Apply &amp; Upload Resume →</a>
+      </div>
+    </div>
+
+    <!-- ─── DIPLOMA CARDS ─── -->
+    <div class="course-card reveal visible" data-category="diploma">
+      <div class="card-top">
+        <span class="card-badge diploma">Diploma</span>
+        <span class="card-icon">🖥️</span>
+        <h3>Computer Hardware &amp; Networking Support</h3>
+        <p>Practical training in IT infrastructure, hardware troubleshooting, and network administration — essential for tech support roles.</p>
+      </div>
+      <div class="card-bottom">
+        <div class="no-fee-banner">🎁 Training materials fully provided by our office</div>
+        <div class="card-meta">
+          <div class="meta-row"><span>🎓</span><span>For: Diploma (CS / ECE / EEE / IT)</span></div>
+          <div class="meta-row"><span>⏱️</span><span>Duration: 30 Days</span></div>
+          <div class="meta-row"><span>📍</span><span>Conducted at: Anaipputhur, Avinashi</span></div>
+        </div>
+        <div class="skills-list">
+          <span class="skill-chip">Networking</span><span class="skill-chip">Hardware</span>
+          <span class="skill-chip">Linux Basics</span><span class="skill-chip">IT Support</span>
+        </div>
+        <a href="https://surveyheart.com/form/69b9172493491404a4690bb2" target="_blank" class="card-apply-btn">Apply &amp; Upload Resume →</a>
+      </div>
+    </div>
+
+    <div class="course-card reveal visible" data-category="diploma">
+      <div class="card-top">
+        <span class="card-badge diploma">Diploma</span>
+        <span class="card-icon">🌐</span>
+        <h3>Website Basics &amp; Digital Tools</h3>
+        <p>An accessible entry point into web technologies — ideal for diploma holders looking to enter the software industry without a coding background.</p>
+      </div>
+      <div class="card-bottom">
+        <div class="no-fee-banner">🎁 Training materials fully provided by our office</div>
+        <div class="card-meta">
+          <div class="meta-row"><span>🎓</span><span>For: Diploma (Any Stream)</span></div>
+          <div class="meta-row"><span>⏱️</span><span>Duration: 21 Days</span></div>
+          <div class="meta-row"><span>📍</span><span>Conducted at: Anaipputhur, Avinashi</span></div>
+        </div>
+        <div class="skills-list">
+          <span class="skill-chip">HTML Basics</span><span class="skill-chip">WordPress</span>
+          <span class="skill-chip">Digital Tools</span><span class="skill-chip">Email/Docs</span>
+        </div>
+        <a href="https://surveyheart.com/form/69b9172493491404a4690bb2" target="_blank" class="card-apply-btn">Apply &amp; Upload Resume →</a>
+      </div>
+    </div>
+
+    <!-- ─── MBA CARDS ─── -->
+    <div class="course-card reveal visible" data-category="mba">
+      <div class="card-top">
+        <span class="card-badge mba">MBA / Management</span>
+        <span class="card-icon">📈</span>
+        <h3>Business Analysis &amp; Project Coordination</h3>
+        <p>Training for management graduates to step into business analyst or project coordinator roles within a technology company.</p>
+      </div>
+      <div class="card-bottom">
+        <div class="no-fee-banner">🎁 Training materials fully provided by our office</div>
+        <div class="card-meta">
+          <div class="meta-row"><span>🎓</span><span>For: MBA / BBA / PGDM</span></div>
+          <div class="meta-row"><span>⏱️</span><span>Duration: 30 Days</span></div>
+          <div class="meta-row"><span>📍</span><span>Conducted at: Anaipputhur, Avinashi</span></div>
+        </div>
+        <div class="skills-list">
+          <span class="skill-chip">Business Analysis</span><span class="skill-chip">Agile</span>
+          <span class="skill-chip">JIRA</span><span class="skill-chip">Stakeholder Mgmt</span>
+        </div>
+        <a href="https://surveyheart.com/form/69b9172493491404a4690bb2" target="_blank" class="card-apply-btn">Apply &amp; Upload Resume →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     HOW IT WORKS
+════════════════════════════════════════════ -->
+<section class="hiw-section">
+  <div class="section-label reveal visible">The Training Journey</div>
+  <h2 class="section-title reveal visible">What to Expect When<br>You Join Us</h2>
+  <p class="section-sub reveal visible">Our training is structured to move you from beginner to job-ready — with everything provided directly by Liv Hybrid Tech.</p>
+  <div class="hiw-grid">
+    <div class="hiw-card reveal visible">
+      <div class="hiw-step-num">01</div>
+      <div class="hiw-icon">📋</div>
+      <h4>Resume &amp; Application Review</h4>
+      <p>Submit your resume through our online form. Our team reviews your background and matches you to the most suitable course.</p>
+    </div>
+    <div class="hiw-card reveal visible">
+      <div class="hiw-step-num">02</div>
+      <div class="hiw-icon">📦</div>
+      <h4>Training Materials Provided</h4>
+      <p>All study materials, resources, and project guides are provided by us — you come ready to learn, we handle the rest.</p>
+    </div>
+    <div class="hiw-card reveal visible">
+      <div class="hiw-step-num">03</div>
+      <div class="hiw-icon">👨‍🏫</div>
+      <h4>Guided Office Training</h4>
+      <p>Hands-on sessions at our Anaipputhur office, mentored by experienced professionals. Real projects, real feedback.</p>
+    </div>
+    <div class="hiw-card reveal visible">
+      <div class="hiw-step-num">04</div>
+      <div class="hiw-icon">🎤</div>
+      <h4>Internal Interview</h4>
+      <p>Upon course completion, you attend an internal interview to evaluate your readiness for a role within our team.</p>
+    </div>
+    <div class="hiw-card reveal visible">
+      <div class="hiw-step-num">05</div>
+      <div class="hiw-icon">🏢</div>
+      <h4>Join Liv Hybrid Tech</h4>
+      <p>Successful candidates receive an offer to join our team directly. Your learning journey becomes your career launchpad.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     OPPORTUNITY BAND
+════════════════════════════════════════════ -->
+<div class="opportunity-band">
+  <div class="opp-left">
+    <div class="section-label" style="color: var(--accent);">Work With Us</div>
+    <h2>More Than Training —<br>It's Your <span>Career Entry Point</span></h2>
+    <p>We don't just train you and send you off. The goal from day one is to bring the best talent into our growing team. Every course is a direct pathway to employment at Liv Hybrid Tech Pvt Ltd.</p>
+    <ul class="perks-list">
+      <li><div class="perk-icon">🎁</div><span>All training materials provided at no cost to you — we invest in your learning completely.</span></li>
+      <li><div class="perk-icon">🏢</div><span>Fully office-based training at our Anaipputhur, Avinashi location — structured and professional environment.</span></li>
+      <li><div class="perk-icon">🎤</div><span>A fair, skill-based interview conducted upon course completion — your work speaks for itself.</span></li>
+      <li><div class="perk-icon">💼</div><span>Direct employment offer for successful candidates — join India's growing hybrid tech workforce.</span></li>
+      <li><div class="perk-icon">📈</div><span>Career growth within Liv Hybrid Tech — we promote from within and reward dedication.</span></li>
+    </ul>
+  </div>
+
+  <div class="opp-right">
+    <h3>Your Path to Joining Our Team</h3>
+    <p class="sub">From application to employment — here's the full journey.</p>
+    <div class="step-flow">
+      <div class="flow-step">
+        <div class="flow-dot">1</div>
+        <div>
+          <h5>Submit Your Resume</h5>
+          <p>Upload via our online form or email directly to our office.</p>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-dot">2</div>
+        <div>
+          <h5>Course Matching &amp; Enrollment</h5>
+          <p>We review your background and enroll you in the most fitting program.</p>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-dot">3</div>
+        <div>
+          <h5>Attend Office Training</h5>
+          <p>Learn at our Anaipputhur premises with materials fully provided.</p>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-dot">4</div>
+        <div>
+          <h5>Internal Interview</h5>
+          <p>Demonstrate your skills in a structured assessment by our tech leads.</p>
+        </div>
+      </div>
+      <div class="flow-step" style="padding-bottom: 0;">
+        <div class="flow-dot" style="background: linear-gradient(135deg,#FFD700,#FFA500); color: #000;">🏆</div>
+        <div>
+          <h5>Receive Employment Offer</h5>
+          <p>Successful candidates are formally offered a role at Liv Hybrid Tech.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════
+     APPLY SECTION
+════════════════════════════════════════════ -->
+<section class="apply-section" id="apply">
+  <div class="apply-inner">
+
+    <div class="apply-info">
+      <div class="section-label reveal visible">Apply Today</div>
+      <h2 class="section-title reveal visible" style="max-width:100%">Take the First Step<br>Toward Your Career</h2>
+      <p class="reveal visible" style="color:var(--slate); font-size:0.95rem; line-height:1.75; margin-bottom:28px;">Ready to learn, grow, and join our team? Submit your resume through the form on this page or use our dedicated application link. Our team will reach out within 2 business days.</p>
+
+      <div class="contact-card reveal visible">
+        <div class="contact-row">
+          <div class="c-icon">📍</div>
+          <div class="c-text">
+            <strong>Office Address</strong>
+            <span>Liv Hybrid Tech Pvt Ltd<br>Anaipputhur, Avinashi, Tirupur<br>Tamil Nadu, India</span>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="c-icon">📧</div>
+          <div class="c-text">
+            <strong>Email Your Resume</strong>
+            <a href="mailto:livhybridtech.covai@gmail.com">livhybridtech.covai@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="c-icon">🕐</div>
+          <div class="c-text">
+            <strong>Office Hours</strong>
+            <span>Mon – Sat &nbsp;|&nbsp; 9:00 AM – 4:00 PM IST</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="reveal visible" style="font-size:0.85rem; color:var(--slate); margin-bottom:12px;">Or apply instantly via our official application portal:</p>
+      <a href="https://surveyheart.com/form/69b9172493491404a4690bb2" target="_blank" class="direct-apply-btn reveal visible">
+        <span>📎</span> Upload Resume on SurveyHeart
+      </a>
+    </div>
+
+    <!-- Quick enquiry form -->
+    <div class="apply-form-wrap reveal visible">
+      <h3>Quick Enquiry Form</h3>
+      <p class="fsub">Fill in your details and we'll get back to you with the right course recommendation.</p>
+
+      <div class="form-row-2">
+        <div class="field"><label>First Name</label><input type="text" id="af-fname" placeholder="Your first name"></div>
+        <div class="field"><label>Last Name</label><input type="text" id="af-lname" placeholder="Your last name"></div>
+      </div>
+      <div class="field"><label>Email Address</label><input type="email" id="af-email" placeholder="you@email.com"></div>
+      <div class="field"><label>Phone Number</label><input type="tel" id="af-phone" placeholder="+91 98765 XXXXX"></div>
+      <div class="field">
+        <label>Highest Qualification</label>
+        <select id="af-degree">
+          <option value="">Select your degree…</option>
+          <optgroup label="Engineering">
+            <option>B.E / B.Tech</option>
+            <option>M.E / M.Tech</option>
+            <option>MCA</option>
+          </optgroup>
+          <optgroup label="Arts &amp; Science">
+            <option>B.A</option><option>B.Sc</option><option>B.Com</option><option>BCA</option>
+          </optgroup>
+          <optgroup label="Diploma">
+            <option>Diploma (CS / IT)</option>
+            <option>Diploma (ECE / EEE)</option>
+            <option>Diploma (Any Stream)</option>
+          </optgroup>
+          <optgroup label="Management">
+            <option>BBA</option><option>MBA</option><option>PGDM</option>
+          </optgroup>
+        </select>
+      </div>
+      <div class="field">
+        <label>Course Interest</label>
+        <select id="af-course">
+          <option value="">Select a course…</option>
+          <option>Full-Stack Web Development</option>
+          <option>Mobile Application Development</option>
+          <option>AI &amp; Machine Learning Fundamentals</option>
+          <option>UI/UX Design &amp; Digital Creativity</option>
+          <option>Digital Marketing &amp; Social Media</option>
+          <option>Data Entry &amp; Office Operations</option>
+          <option>Computer Hardware &amp; Networking Support</option>
+          <option>Website Basics &amp; Digital Tools</option>
+          <option>Business Analysis &amp; Project Coordination</option>
+          <option>Not sure — help me choose</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Brief Message (optional)</label>
+        <textarea id="af-msg" placeholder="Any questions or background info you&#39;d like to share…"></textarea>
+      </div>
+
+      <div class="or-divider">— or apply directly with your resume —</div>
+      <a href="https://surveyheart.com/form/69b9172493491404a4690bb2" target="_blank" class="survey-link-btn">
+        📎 &nbsp;Open Resume Upload Form (SurveyHeart)
+      </a>
+
+      <button class="submit-btn" onclick="handleApply()">Submit Enquiry →</button>
+      <div class="success-note" id="applySuccess">
+        ✅ Thank you! We've received your enquiry. Our team will contact you within 2 business days.<br>
+        <small style="opacity:0.7">For faster response, email: livhybridtech.covai@gmail.com</small>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════ -->
+<footer>
+  <div class="foot-logo">
+    <div class="logo-mark">LH</div>
+    Liv Hybrid <span style="color:var(--accent)">&nbsp;Tech Pvt Ltd</span>
+  </div>
+  <p>Empowering careers through office-based technology training and direct employment opportunities. Anaipputhur, Avinashi, Tirupur, Tamil Nadu.</p>
+  <p><a href="mailto:livhybridtech.covai@gmail.com" style="color:var(--accent); text-decoration:none;">livhybridtech.covai@gmail.com</a></p>
+  <div class="foot-line">© 2024 Liv Hybrid Tech Pvt Ltd · All rights reserved</div>
+</footer>
+
+
+<script>
+// ── Filter courses ──
+function filterCourses(cat) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+  document.querySelectorAll('.course-card').forEach(card => {
+    if (cat === 'all' || card.dataset.category === cat) {
+      card.removeAttribute('data-hidden');
+      card.style.display = '';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+
+// ── Form submit ──
+function handleApply() {
+  const fname = document.getElementById('af-fname').value.trim();
+  const email = document.getElementById('af-email').value.trim();
+  if (!fname || !email) { alert('Please enter your name and email to continue.'); return; }
+  const s = document.getElementById('applySuccess');
+  s.style.display = 'block';
+  ['af-fname','af-lname','af-email','af-phone','af-msg'].forEach(id => document.getElementById(id).value = '');
+  document.getElementById('af-degree').selectedIndex = 0;
+  document.getElementById('af-course').selectedIndex = 0;
+  setTimeout(() => s.style.display = 'none', 8000);
+}
+
+// ── Scroll reveal ──
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+
+</body></html>
